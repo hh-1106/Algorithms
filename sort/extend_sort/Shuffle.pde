@@ -7,17 +7,13 @@ class Shuffle extends SortAlgorithm {
 
   @Override
     public void run() {
-    int val;
-    for (int i=0; i<n-1; i++) {
+    for (int i=n-1; i>=0; i--) {
       this.setColor(i, 2);
+      int rnd = floor(random(i+1));
+      swap(i, rnd);
       this.sleep();
-      int max = n-i;
-      int rnd = int(random(max));
       this.setColor(rnd, 0);
       this.setColor(i, 0);
-      val = A[rnd];
-      A[rnd] = A[max-1];
-      A[max-1] = val;
     }
 
     this.t = null;

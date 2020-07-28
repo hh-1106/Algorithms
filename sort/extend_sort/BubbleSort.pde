@@ -1,5 +1,5 @@
 class BubbleSort extends SortAlgorithm {
-  
+
   BubbleSort(Harry A) {
     super(A);
     println("Bubble Sort ...");
@@ -7,7 +7,11 @@ class BubbleSort extends SortAlgorithm {
 
   @Override
     public void run() {
+    bubbleSort();
+    this.t = null;
+  }
 
+  void bubbleSort() {
     for (int i=0; i<n; i++) {
       for (int j=n-1; j>i; j--) {
         this.setColor(j, 2);
@@ -20,7 +24,5 @@ class BubbleSort extends SortAlgorithm {
         this.setColor(j-1, 0);
       }
     }
-    
-    this.t = null;
   }
 }

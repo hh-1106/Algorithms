@@ -1,5 +1,5 @@
 class InsertionSort extends SortAlgorithm {
-  
+
   // 父类中的构造方法是不能继承的
   // 但是在实例化子类的时候会调用父类的构造方法
   InsertionSort(Harry A) {
@@ -9,6 +9,11 @@ class InsertionSort extends SortAlgorithm {
 
   @Override
     public void run() {
+    insertionSort();
+    this.t = null;
+  }
+
+  void insertionSort() {
     for (int j=1; j<n; j++) {
       this.setColor(j, 2);
       int k = A[j];
@@ -26,7 +31,5 @@ class InsertionSort extends SortAlgorithm {
       A[i+1] = k;
     }
     this.setColor(n-1, 0);
-    
-    this.t = null;
   }
 }
