@@ -10,7 +10,8 @@ class QuickSort extends SortAlgorithm {
 
   @Override
     public void run() {
-    quickSort(0, n-1);
+    //quickSort(0, n-1);
+    randomizedQuickSort(0, n-1);
     this.t = null;
   }
 
@@ -20,7 +21,6 @@ class QuickSort extends SortAlgorithm {
       this.setColor(q, 3);
       quickSort(p, q-1);
       quickSort(q+1, r);
-
       this.setColor(q, 0);
     }
   }
@@ -46,5 +46,24 @@ class QuickSort extends SortAlgorithm {
     this.swap(i, r);
 
     return i;
+  }
+
+  // 随机抽样
+  int randomizedPartition(int p, int r) {
+    // 将A[r] 与从A[p..r]中随机选出的一个元素交换, 以保证主元是随机选取的
+    // 我们期望在平均情况下对输入数组的划分是比较均衡的
+    int i = floor(random(p, r+1));
+    this.swap(i, r);
+    return partition(p, r);
+  }
+
+  void randomizedQuickSort(int p, int r) {
+    if (p<r) {
+      int q = randomizedPartition(p, r);
+      this.setColor(q, 3);
+      randomizedQuickSort(p, q-1);
+      randomizedQuickSort(q+1, r);
+      this.setColor(q, 0);
+    }
   }
 }

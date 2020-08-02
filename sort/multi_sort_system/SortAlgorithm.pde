@@ -7,15 +7,8 @@ public class SortAlgorithm implements Runnable {
   SortAlgorithm() {
     println("SortAlgorithm ...");
   }
-
-  SortAlgorithm(int[] A) {
-    //println("SortAlgorithm to A ...");
-    this.A = A;
-    n = A.length;
-  }
   
   SortAlgorithm(Harry h) {
-    //println("SortAlgorithm to A ...");
     this.harry = h;
     this.A = h.A;
     this.n = h.A.length;
@@ -27,7 +20,7 @@ public class SortAlgorithm implements Runnable {
 
   public void start() {
     if (t != null)  return;
-    println(this.getClass().getName() + " start ...");
+    //println(this.getClass().getName() + " start ...");
     t = new Thread(this);
     t.start();
   }

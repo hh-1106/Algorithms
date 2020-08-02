@@ -12,6 +12,11 @@ class InsertionSort extends SortAlgorithm {
 
   @Override
     public void run() {
+    insertionSort();
+    this.t = null;
+  }
+
+  void insertionSort() {
     for (int j=1; j<n; j++) {
       this.setColor(j, 2);
       int k = A[j];
@@ -29,7 +34,5 @@ class InsertionSort extends SortAlgorithm {
       A[i+1] = k;
     }
     this.setColor(n-1, 0);
-
-    this.t = null;
   }
 }

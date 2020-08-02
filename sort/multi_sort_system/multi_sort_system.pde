@@ -1,30 +1,19 @@
-int INFINITE = 99999;
-
-InsertionSort insertionSort;
-BubbleSort    bubbleSort;
-MergeSort     mergeSort;
-QuickSort     quickSort;
-HeapSort      heapSort;
-Shuffle       shuffle;
+String[] sortNames = {"shuffle", "insertion", "shell", "bubble", "merge", "heap", "quick"};
+int W = 2;    // 一行3个
+int H = 1;    // 一列2个
 
 HarrySystem hs;
 
 void settings() {
-  size(1280, 720, P2D);
+  size(1200, 600, P2D);
   smooth(6);
 }
 
 void setup() {
-  frameRate(300);
+  frameRate(30);
   setColorScheme();
+  setFont();
   hs = new HarrySystem();
-
-  //insertionSort = new InsertionSort(h);
-  //bubbleSort    = new BubbleSort(h);
-  //mergeSort     = new MergeSort(h);
-  //quickSort     = new QuickSort(h);
-  //heapSort      = new HeapSort(h);
-  //shuffle       = new Shuffle(h);
 }
 
 void draw() {
@@ -35,13 +24,9 @@ void draw() {
 }
 
 void mouseClicked() {
+  hs.setSortAlgorithms();
 }
 
 void keyPressed() {
-  //if ( key == ' ' )  shuffle.start();
-  //if ( key == '1' )  insertionSort.start();
-  //if ( key == '2' )  bubbleSort.start();
-  //if ( key == '3' )  mergeSort.start();
-  //if ( key == '4' )  quickSort.start();
-  //if ( key == '5' )  heapSort.start();
+  hs.shuffleAll();
 }
