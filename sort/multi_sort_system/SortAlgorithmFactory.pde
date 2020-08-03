@@ -7,6 +7,9 @@ class SortAlgorithmFactory {
     case "counting" :
       sa = new CountingSort(h);
       break;
+    case "radix" :
+      sa = new RadixSort(h);
+      break;
     case "insertion" :
       sa = new InsertionSort(h);
       break;

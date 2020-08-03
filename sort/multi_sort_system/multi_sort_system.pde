@@ -1,4 +1,4 @@
-String[] sortNames = {"shuffle", "counting", "insertion", "shell", "bubble", "merge", "heap", "quick"};
+String[] sortNames = {"shuffle", "counting", "radix", "insertion", "shell", "bubble", "merge", "heap", "quick"};
 int W = 2;    // 一行3个
 int H = 1;    // 一列2个
 
