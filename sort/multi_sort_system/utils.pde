@@ -21,3 +21,7 @@ void setFont() {
   textFont(font);
   textAlign(CENTER, CENTER);
 }
+
+float log10 (int x) {
+  return (log(x) / log(10));
+}
