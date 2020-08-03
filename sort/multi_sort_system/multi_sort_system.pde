@@ -1,11 +1,13 @@
-String[] sortNames = {"shuffle", "counting", "radix", "insertion", "shell", "bubble", "merge", "heap", "quick"};
-int W = 2;    // 一行3个
-int H = 1;    // 一列2个
+//String[] sortNames = {"shuffle", "counting", "radix", "bucket", "insertion", "shell", "bubble", "merge", "heap", "quick"};
+String[] sortNames = {"shuffle", "insertion", "radix", "bubble", "merge", "heap", "quick", "bucket", "shell", "counting"};
+int W = 3;    // 一行3个
+int H = 3;    // 一列2个
 
 HarrySystem hs;
 
 void settings() {
-  size(1200, 600, P2D);
+  //size(1600, 900, P2D);
+  size(1200, 675, P2D);
   smooth(6);
 }
 

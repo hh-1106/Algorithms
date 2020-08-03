@@ -16,10 +16,10 @@ void setFont() {
   //String[] fontList = PFont.list();
   //printArray(fontList);
   //noLoop();
-  PFont font = createFont("Mouse.otf", 48);
+  PFont font = createFont("Mouse.otf", 32);
   fill(cs.get(0));
   textFont(font);
-  textAlign(CENTER, CENTER);
+  textAlign(LEFT, CENTER);
 }
 
 float log10 (int x) {

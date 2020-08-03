@@ -1,4 +1,4 @@
-class HarrySystem { //<>// //<>//
+class HarrySystem { //<>// //<>// //<>//
   ArrayList<Harry> harrys;
   SortAlgorithmFactory saf;    // 算法工厂
   int n = W*H;                 // 排序算法数量

@@ -10,6 +10,9 @@ class SortAlgorithmFactory {
     case "radix" :
       sa = new RadixSort(h);
       break;
+    case "bucket" :
+      sa = new BucketSort(h);
+      break;
     case "insertion" :
       sa = new InsertionSort(h);
       break;

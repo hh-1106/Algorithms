@@ -32,6 +32,14 @@ public class SortAlgorithm implements Runnable {
     catch (Exception e) {
     }
   }
+  
+  public void sleep(int t) {
+    try {
+      Thread.sleep(t);
+    }
+    catch (Exception e) {
+    }
+  }
 
   private boolean isSorted() {
     for (int i=0; i<A.length-1; i++) {
