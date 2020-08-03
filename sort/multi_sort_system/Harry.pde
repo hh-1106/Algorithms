@@ -3,7 +3,7 @@ class Harry {
   PGraphics pg;
   int[] A;
   int[] status;
-  int n = 128;
+  int n = 256;
   SortAlgorithm sort;
 
   Harry() {

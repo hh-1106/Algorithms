@@ -4,8 +4,8 @@ class SortAlgorithmFactory {
     SortAlgorithm sa = null;
 
     switch(type) {
-    case "shuffle" :
-      sa = new Shuffle(h);
+    case "counting" :
+      sa = new CountingSort(h);
       break;
     case "insertion" :
       sa = new InsertionSort(h);
@@ -24,6 +24,9 @@ class SortAlgorithmFactory {
       break;
     case "quick" :
       sa = new QuickSort(h);
+      break;
+    default:
+      sa = new Shuffle(h);
       break;
     }
 
