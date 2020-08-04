@@ -3,7 +3,7 @@ class Harry {
   PGraphics pg;
   int[] A;
   int[] status;
-  int n = 8;
+  int n = 32;
   SortAlgorithm sort;
 
   Harry() {
@@ -21,7 +21,7 @@ class Harry {
     pg.beginDraw();
     pg.background(106, 94, 96, 0);
 
-    pg.strokeWeight(1.5);
+    pg.strokeWeight(2.4);
     pg.translate(pg.width*0.5, pg.height*0.5);
     for (int i=0; i<n; i++) {
       float a = map(i, 0, n, -HALF_PI, TWO_PI-HALF_PI);

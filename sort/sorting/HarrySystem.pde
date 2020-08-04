@@ -1,4 +1,4 @@
-class HarrySystem { //<>// //<>// //<>// //<>//
+class HarrySystem { //<>// //<>// //<>// //<>// //<>//
   ArrayList<Harry> harrys;
   SortAlgorithmFactory saf;    // 算法工厂
   int n = W*H;                 // 排序算法数量
@@ -16,7 +16,7 @@ class HarrySystem { //<>// //<>// //<>// //<>//
     for (int i=0; i<n; i++) {
       Harry h = harrys.get(i);
       if (h.isSorting()) continue;
-      int rnd = ceil(random(9));
+      int rnd = ceil(random(sortNames.length-1));
       h.setSortAlgorithm(saf.createSA(sortNames[rnd], h));
     }
   }
