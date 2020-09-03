@@ -1,21 +1,21 @@
 // 线性表接口
-interface LList<T>{
+interface LList<T> {
 
-    boolean isEmpty();          // 判断线性表是否为空
+  boolean isEmpty();          // 判断线性表是否为空
 
-    int     length();           // 返回线性表长度
+  int     length();           // 返回线性表长度
 
-    T       get(int i);         // 返回第i个元素
+  T       get(int i);         // 返回第i个元素
 
-    void    set(int i, T x);    // 设置第i个元素为x
+  void    set(int i, T x);    // 设置第i个元素为x
 
-    void    insert(int i, T x); // 插入x作为第i个元素
+  void    insert(int i, T x); // 插入x作为第i个元素
 
-    void    append(T x);        // 在线性表最后插入x元素
+  void    append(T x);        // 在线性表最后插入x元素
 
-    T       remove(int i);      // 删除第i个元素并返回它
+  T       remove(int i);      // 删除第i个元素并返回它
 
-    void    removeall();        // 删除线性表所有元素
+  void    removeall();        // 删除线性表所有元素
 
-    T       search(T key);      // 查找线性表首次出现的关键词为key的元素
+  T       search(T key);      // 查找线性表首次出现的关键词为key的元素
 }

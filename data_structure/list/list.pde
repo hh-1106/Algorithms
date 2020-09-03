@@ -1,12 +1,20 @@
 void setup() {
   //testNode();
   //testSeqList();
-  testSinglyLinkedList();
+  //testSinglyLinkedList();
+
+  //testDLNode();
+  testDoublyLinkedList();
 }
 
 
 void testNode() {
   Node n = new Node<Integer>(123);
+  print( n.toString());
+}
+
+void testDLNode() {
+  DLNode n = new DLNode<Integer>(55);
   print( n.toString());
 }
 
@@ -37,4 +45,19 @@ void testSinglyLinkedList() {
   println(sl.toString());
   sl.remove(5);
   println(sl.toString());
+}
+
+void testDoublyLinkedList() {
+  DoublyLinkedList dl = new DoublyLinkedList<Float>();
+  //dl.insertAtBegining(1);
+  //dl.insertAtEnd(2);
+  //dl.insertAtEnd(3);
+  //println(dl.getSize());
+
+  for (int i=5; i<10; i++) {
+    dl.insertAt(i, i);
+  }
+  println(dl.getSize());
+  dl.printForward();
+  println(dl.toString());
 }

@@ -52,14 +52,14 @@ class SinglyLinkedList<T> implements LList<T> {
   }
 
   @Override
-  // 判断单链表是否为空
-  boolean isEmpty() {
+    // 判断单链表是否为空
+    boolean isEmpty() {
     return this.head.next == null;
   }
 
   @Override
-  // 返回单链表长度
-  int length() {
+    // 返回单链表长度
+    int length() {
     int i = 0;
     Node<T> p = this.head.next; // p从单链表第一个节点开始
     while (p != null) {         // 若单链表未结束
@@ -83,8 +83,8 @@ class SinglyLinkedList<T> implements LList<T> {
   }
 
   @Override
-  // 设置第i个元素值为x，若i指定序号无效则抛出序号越界异常
-  void set(int i, T x) {
+    // 设置第i个元素值为x，若i指定序号无效则抛出序号越界异常
+    void set(int i, T x) {
     if (x == null)
       return;// 不能设置空对象
     if (i >= 0) {
@@ -93,15 +93,15 @@ class SinglyLinkedList<T> implements LList<T> {
         p = p.next;
       if (p != null)
         p.data = x;// p指向第i个结点
-    } else{
-			// throw new IndexOutOfBoundsException(i + "");// 抛出序号越界异常
+    } else {
+      // throw new IndexOutOfBoundsException(i + "");// 抛出序号越界异常
       System.out.println("IndexOutOfBoundsException: " + i);
     }
   }
 
   @Override
-  // 将x对象插入在序号为i节点前
-  void insert(int i, T x) {
+    // 将x对象插入在序号为i节点前
+    void insert(int i, T x) {
     if (x == null)
       return;
     Node<T> p = this.head;
@@ -120,8 +120,8 @@ class SinglyLinkedList<T> implements LList<T> {
   }
 
   @Override
-  // 删除序号为i的节点，若操作成功，则返回被删除对象，否则返回null
-  T remove(int i) {
+    // 删除序号为i的节点，若操作成功，则返回被删除对象，否则返回null
+    T remove(int i) {
     if (i >= 0) {
       Node<T> p = this.head;
       // 定位到待删除节点i的前驱节点
@@ -137,8 +137,8 @@ class SinglyLinkedList<T> implements LList<T> {
   }
 
   @Override
-  // 删除单链表所有元素，java自动回收各结点所占用的内存空间
-  void removeall() {
+    // 删除单链表所有元素，java自动回收各结点所占用的内存空间
+    void removeall() {
     this.head.next = null;
   }
 

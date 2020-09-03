@@ -1,23 +1,23 @@
-class DLNode<T>{
-    T           data;
-    DLNode<T>   next;
-    DLNode<T>   prev;
+class DLNode<T> {
+  T           data;
+  DLNode<T>   next;
+  DLNode<T>   prev;
 
-    DLNode(){
-        this(null, null, null);
-    }
+  DLNode() {
+    this(null, null, null);
+  }
 
-    DLNode(T data){
-        this(data, null, null);
-    }
+  DLNode(T data) {
+    this(data, null, null);
+  }
 
-    DLNode(T data, DLNode<T> next, DLNode<T> prev){
-        this.data = data;
-        this.next = next;
-        this.prev = prev;
-    }
+  DLNode(T data, DLNode<T> next, DLNode<T> prev) {
+    this.data = data;
+    this.next = next;
+    this.prev = prev;
+  }
 
-    @Override
+  @Override
     String toString() {
     return data.toString();
   }
