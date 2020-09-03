@@ -1,4 +1,4 @@
-class PriorityQueue<T> implements Queue<T>{
+class PriorityQueue<T> /*implements Queue<T>*/{
 
   
 
